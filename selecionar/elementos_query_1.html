@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/estilo.css">
+          
+    </head>
+    <body id="exercicio">
+        <div id="primeiro" class="primeiro">#Primeiro</div>
+        <div id="segundo" class="destaque" destaque="1">#Segundo</div>
+        <div id="terceiro" metade>#Terceiro</div>    
+        <div id="quarto" class="destaque" destaque="2">#Quarto</div>
+        <div id="quinto"  class="ultimo">#Quinto</div>
+        <script>
+           function selecionarApenasUm(seletor) {
+               const elemento = document.querySelector(seletor);
+               console.log(elemento);
+            
+            }
+           selecionarApenasUm('#primeiro'); // selecionar por ID
+           selecionarApenasUm('.destaque'); // Selecionar por classe
+           selecionarApenasUm('.ultimo');// Selecionar por classe
+           selecionarApenasUm('.primeiro');// Selecionar por classe
+           selecionarApenasUm('[metade]'); //Por atributo
+           selecionarApenasUm('[destaque="2"]'); // por atribut com valor
+           selecionarApenasUm('[destaque="1"]');// por atribut com valor
+
+        </script>
+
+    </body>
+</html>

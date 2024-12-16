@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/estilo.css">
+
+</head>
+
+<body id="exercicio">
+    <main>
+        <section>
+            <a href="index.html">Voltar</a>
+            <p>Lista de Aprovados</p>
+            <ul>
+                <li>Ana</li>
+                <li>Rafael</li>
+                <li>Gustavo</li>
+                <li>Pedro</li>
+            </ul>
+            <p>Lista de Reprovados</p>
+            <ul>
+                <li>Alex</li>
+                <li>Carlos</li>
+                <li>Davi</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        const itens = document.querySelectorAll('main > section li:nth-child(1)')
+      itens.forEach(no => console.log(no.textContent = `>>>${no.textContent}<<<`));
+      
+    </script>
+
+</body>
+
+</html>

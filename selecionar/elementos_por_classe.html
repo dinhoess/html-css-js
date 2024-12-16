@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/estilo.css">
+          
+    </head>
+    <body id="exercicio">
+        <div id="primeiro">#Primeiro</div>
+        <div id="segundo" class="destaque">#Segundo</div>
+        <div id="terceiro">#Terceiro</div>    
+        <div id="quarto" class="destaque">#Quarto</div>
+        <div id="quinto"  class="ultimo">#Quinto</div>
+        <script>
+            //HTMLCollection
+            const destaques = document.getElementsByClassName('destaque')
+            destaques[1].classList.remove('destaque')
+
+            const ultimos = document.getElementsByClassName('ultimo')
+            ultimos[0].classList.add('destaque')
+
+        </script>
+    </body>
+</html>

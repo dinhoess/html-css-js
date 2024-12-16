@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/estilo.css">
+          
+    </head>
+    <body id="exercicio">
+        <div id="primeiro" class="primeiro">#Primeiro</div>
+        <div id="segundo" class="destaque" destaque="1">#Segundo</div>
+        <div id="terceiro" metade>#terceiro</div>    
+        <div id="quarto" class="destaque" destaque="2">#Quarto</div>
+        <div id="quinto"  class="ultimo">#Quinto</div>
+        <script>
+         
+         //Node List
+        function selecionarTodos(seletor)
+        {
+          return document.querySelectorAll(seletor);
+        }
+
+        selecionarTodos('#primeiro').forEach(el => console.log(el)); 
+        console.log(selecionarTodos('.primeiro').length);         
+        console.log(selecionarTodos('.ultimo').item(0)); 
+       
+        selecionarTodos('[metade]').forEach(no => {
+            console.log(no instanceof Node);
+            console.log(no.nodeName);
+            console.log(no.textContent);
+            
+           })
+        </script>
+        h
+
+    </body>
+</html>
