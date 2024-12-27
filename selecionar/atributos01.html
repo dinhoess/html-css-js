@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/estilo.css">
+
+</head>
+
+<body id="exercicio">
+    <div>
+        <a href="http://www.cod3r.com.br">Cod3r</a>
+    </div>
+
+    <div id="logo">
+        <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="logo">
+    </div>
+  
+    <script>
+        //Imagem é uma instancia de Node(Nó)
+        //Quando é uma instancia de querySelectorAll é uma instancia de nodeList
+        // Quando estamos acessando um elemento (querySelector), estamos acessando um Node
+    const img = document.querySelector('img') 
+    console.log('src #1', img.getAttribute('src')) //para quando vc tem o nome do atributo numa variável     
+    console.log('src #2', img.src)     
+    console.log('src #3', img['src']) 
+    console.log('alt', img.alt) 
+
+    console.log(img instanceof Node)
+    console.log('Node Type: ',img.nodeType)
+    console.log('Node Name: ',img.nodeName)
+
+    const link = document.querySelector('a')
+    console.log('href', link.href)
+    console.log('text', link.firstChild.nodeType)
+    link.firstChild.nodeValue = 'Site da Cod3r'
+    link.innerHTML = "Novo Site da Coder"
+    </script>
+
+</body>
+
+</html>
