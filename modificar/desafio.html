@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body id="exercicio">
+
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Nota</th>
+        </tr>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    
+
+
+    <script>     
+    const alunos = [
+        {nome:'Ana',nota:8.1},
+        {nome:'Bia',nota:9.3},
+        {nome:'Carlos',nota:7.7},
+        {nome:'Daniel',nota:8.9},
+        {nome:'Julia',nota:8.5},        
+    ]
+
+   alunos.forEach(e => {
+        const tbody = document.getElementById('tbody')
+
+        const tr = document.createElement('tr')
+        const tdNome = document.createElement('td')
+        const tdNota = document.createElement('td')
+
+        tdNome.innerText = e.nome
+        tdNota.innerText = e.nota
+
+        tr.appendChild(tdNome)
+        tr.appendChild(tdNota)
+
+        tbody.appendChild(tr)
+     }
+   )
+
+    </script>
+
+</body>
+
+</html>

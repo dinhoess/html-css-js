@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body id="exercicio">
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+
+    <script>
+         const div = document.querySelector('div')    
+         console.log(div)
+
+         div.innerHTML = 'Texto alterado'
+         //div.outerHTML = 'Texto alterado 2'
+         div.insertAdjacentHTML('beforebegin','<p>Antes do Inicio</p>')
+         div.insertAdjacentHTML('afterbegin','<p>Depois do Inicio</p>')
+         div.insertAdjacentHTML('beforeend','<p>Antes do Fim</p>')
+         div.insertAdjacentHTML('afterend','<p>Depois do Fim</p>')
+
+         console.log(div.innerHTML)
+         console.log(div.innerText)
+    </script>
+
+</body>
+
+</html>
