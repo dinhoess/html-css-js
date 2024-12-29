@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body id="exercicio">
+    <div>
+        <a esperar="3" href="https://google.com.br">Google</a>
+
+    </div>
+
+    <div>
+        <a esperar="5" href="https://yahoo.com.br">Yahoo</a>
+
+    </div>
+
+    <script>
+        function navegarComEspera(event) {
+            event.preventDefault()
+            const link = event.target
+            segundos = +link.getAttribute('esperar')
+            setTimeout(
+                () => {
+                    window.location.href = link.href
+                }, segundos *1000
+            )
+        }
+
+        const linssParaEsperar = document.querySelectorAll('a[esperar]')
+        linssParaEsperar.forEach (link => link.onclick = navegarComEspera)
+
+    </script>
+
+</body>
+
+</html>

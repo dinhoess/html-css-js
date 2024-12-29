@@ -7,14 +7,16 @@
 <body id="exercicio">
 
     <table>
-        <tr>
-            <th>Nome</th>
-            <th>Nota</th>
-        </tr>
-        <tbody id="tbody">
-            
-        </tbody>
-    </table>
+        <thead>
+            <tr>
+                <th>Nome</th> 
+                <th>Nota</th>
+            </tr>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+        </thead>
     
 
 
@@ -27,22 +29,38 @@
         {nome:'Julia',nota:8.5},        
     ]
 
-   alunos.forEach(e => {
+    const tbody = document.querySelector('tbody')    
+
+    alunos.forEach(aluno=> {
+      const tdNome = document.createElement('td');
+      tdNome.innerHTML = aluno.nome; 
+
+      const tdNota = document.createElement('td');
+      tdNota.innerHTML = aluno.nome; 
+
+      const linha = document.createElement('tr')
+
+      linha.appendChild(tdNome)
+      linha.appendChild(tdNota)
+
+      tbody.appendChild(linha)
+      
+     /* minha forma de resolver
         const tbody = document.getElementById('tbody')
 
         const tr = document.createElement('tr')
-        const tdNome = document.createElement('td')
-        const tdNota = document.createElement('td')
 
-        tdNome.innerText = e.nome
-        tdNota.innerText = e.nota
+        const tdNome = document.createElement('td')
+        tdNome.innerText = aluno.nome
+        
+        const tdNota = document.createElement('td')
+        tdNota.innerText = aluno.nota
 
         tr.appendChild(tdNome)
         tr.appendChild(tdNota)
 
-        tbody.appendChild(tr)
-     }
-   )
+        tbody.appendChild(tr)*/
+     })
 
     </script>
 
