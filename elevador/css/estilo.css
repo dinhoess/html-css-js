@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
 /*CSS Gerais*/
 
 *{
@@ -9,12 +10,52 @@ body{
     display: flex;
     flex-direction: column; 
     background-color: black;   
+    height: 100vh;
+    font-family: "VT323", serif;
+}
+
+.calcada{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    flex: 1;
 }
 
 /* CSS - Controles*/
+.controles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    gap: 20px;
+    background-color: #222;
+    padding: 10px;
+    margin-bottom: 15px;
+}
 
+.controles .mostrador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #22f522;
+    border: 10px solid #666;
+    height: 100%;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 2.5rem;
+}
 
+.controles button{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: 6px solid #999;
+}
 
+.controles button.destaque{
+    border-color: rgb(212, 212, 76);
+}
 
 /* CSS - Rua*/
 .rua{
@@ -23,6 +64,7 @@ body{
     height: 100px;
     background-color: #888;
     gap: 30px;
+    border-top: 10px solid white;
 
 }
 
@@ -30,4 +72,133 @@ body{
     flex: 1;
     height: 10px;
     background-color: #DDD;
+}
+
+/*CSS - Arvore*/
+.arvore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arvore::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: green;
+
+}
+
+.arvore::after{
+    content: "";
+    width: 20px;
+    height: 100px;
+    background-color: #4d3131;
+}
+
+/*CSS - Prédio*/
+
+.predio{
+    display: flex;
+    width: 500px;
+    height: 100%;
+    background-color: #319da0;
+    gap: 10px;
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    background-color: #0006;
+    flex: 2;
+}
+
+
+.andar{
+    flex: 1;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.porta{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5%;
+    align-items: center;
+    width: 40%;
+    height: 80%;
+    background-color: brown;
+    border: 5px solid #fff6;
+    border-bottom-width: 0px;
+}
+
+.porta::after{
+    content: "";
+    width: 30%;
+    height: 15%;
+    border-radius: 5px;
+    background-color: #fff9;
+
+}
+
+.terreo{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border-bottom: 2px solid transparent;
+}
+
+.janela{
+    position: relative;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #068888;
+    border: 5px solid #fffc;
+    width: 40%;
+    height: 50%;
+
+
+}
+
+.janela::after{
+    content: "";    
+    position: absolute;
+    border: 1px solid #fffc;
+    top: 0;
+    height: 100%;
+    width: 1px;
+}
+
+.janela::before{
+    content: "";    
+    position: absolute;
+    border: 1px solid #fffc;
+    left: 0;
+    height: 1px;
+    width: 100%;
+}
+
+.poco{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #fff9;
+    flex: 1;
+}
+
+.elevador{
+   position: absolute; 
+   border: 3px solid black;  
+   border-top-width: 10px;
+   background-color: #FFFA;
+   width: 80%;
+   height: 100px;
+   bottom: 0;
+
 }
