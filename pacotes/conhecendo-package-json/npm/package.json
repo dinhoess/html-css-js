@@ -1,0 +1,20 @@
+{
+  "name": "pacotes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "teste": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Edvaldo",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-emoji": "^2.2.0"
+  },
+  "devDependencies": {
+    "chalk": "^5.4.1"
+  }
+}
