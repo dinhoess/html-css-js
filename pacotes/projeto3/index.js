@@ -1,5 +1,5 @@
-import { pegaDados,deletar, salvar, persistirValores} from "./banco.js";
-import {exit, menu, ler, textoVerde, textoAzul} from "./interface.js";
+import { pegaDados,deletar, salvar, persistirValores, } from "./banco.js";
+import {exit, menu, ler, textoVerde, textoAzul, nemuSelecaoUsuario} from "./interface.js";
 const itemMenu = [" Adicionar ", " Editar ", " Deletar ", " Ver Todos ", " Persistir ", " Sair " ];
 
 let nome;
@@ -13,14 +13,17 @@ while(1){
     textoVerde("Feito!")
     break;
    case "editar" :
-    id = await ler(`\n ID Para Editar: `);
+    //id = await ler(`\n ID Para Editar: `);
+    id = await nemuSelecaoUsuario(pegaDados());
     nome = await ler("Nome para Atualizar: ")
-    salvar(nome,+id);
-    textoVerde("Feito!")    
+    salvar(nome,id);
+    textoVerde("Feito!") 
+
     break;
    case "deletar":
-    id = await ler("ID Para EdExcluir: ");   
-    deletar(+id);
+    //id = await ler("ID Para EdExcluir: ");   
+    id = await nemuSelecaoUsuario(pegaDados());
+    deletar(id);
     textoVerde("Feito!")      
     break;
    case "ver todos": 
